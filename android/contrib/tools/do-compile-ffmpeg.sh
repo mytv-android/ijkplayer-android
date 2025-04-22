@@ -200,6 +200,7 @@ if [ ! -f "$FF_TOOLCHAIN_TOUCH" ]; then
             ARCH=arm
         fi
         FF_MAKE_TOOLCHAIN_FLAGS="--install-dir $FF_TOOLCHAIN_PATH --arch $ARCH --api $FF_ANDROID_PLATFORM"
+        echo python3 --version
         python3 $ANDROID_NDK/build/tools/make_standalone_toolchain.py \
             $FF_MAKE_TOOLCHAIN_FLAGS
     fi
