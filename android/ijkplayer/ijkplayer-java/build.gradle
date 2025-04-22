@@ -11,7 +11,7 @@ android {
         abortOnError false
     }
     defaultConfig {
-        minSdkVersion 25
+        minSdkVersion 21
         targetSdkVersion rootProject.ext.targetSdkVersion
         externalNativeBuild {
             cmake {
@@ -19,7 +19,7 @@ android {
             }
         }
         ndk {
-            abiFilters 'arm64-v8a', 'x86_64'
+            abiFilters 'armeabi-v7a', 'arm64-v8a'
         }
     }
     buildTypes {
@@ -43,7 +43,7 @@ android {
             useLegacyPackaging true
         }
     }
-    ndkVersion '27.0.12077973'
+    ndkVersion '21.4.7075529'
     publishNonDefault true
 }
 
